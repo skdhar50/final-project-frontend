@@ -634,10 +634,6 @@ select {
   --tw-backdrop-sepia:  ;
 }
 
-.flex {
-  display: flex;
-}
-
 .border-b-4 {
   border-bottom-width: 4px;
 }

@@ -4,7 +4,8 @@
 	"main": "tailwind.config.js",
 	"license": "MIT",
 	"scripts": {
-		"build": "tailwindcss -i ./src/main.css -o ./dist/output.css -w"
+		"build": "tailwindcss -i ./src/main.css -o ./dist/output.css -w",
+		"build2": "tailwindcss -i ./src/main.css -o ./dist/style.css -w"
 	},
 	"devDependencies": {
 		"postcss": "^8.4.5",
