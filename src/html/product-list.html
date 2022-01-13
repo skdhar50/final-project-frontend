@@ -1,5 +1,5 @@
 <!-- 
- * Title: Header - Footer
+ * Title: Product List
  * Author: Meskatul Islam (https://iammeskat.github.com)
  * Date: 11/01/2022
  -->
@@ -9,7 +9,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Header - Footer | CSE Final Project</title>
+    <title>Product List | CSE Final Project</title>
 
     <!-- dropdown menu (for small device) -->
     <link
@@ -587,7 +587,9 @@
       <!-- end main head bar -->
 
       <!-- start navbar -->
-      <nav class="navbar hidden md:block bg-gray-700 sticky top-0 z-30 w-full">
+      <nav
+        class="navbar hidden md:block bg-gray-700 sticky top-0 z-30 w-full is-pin"
+      >
         <div class="container mx-auto py-2">
           <!-- start navbar items  -->
           <div class="mx-auto flex justify-between">
@@ -667,7 +669,6 @@
                     </ul>
                   </div>
                 </div>
-
                 <a
                   href="#"
                   class="h-10 border-b-2 flex items-center justify-between hover:text-black"
@@ -1401,14 +1402,1529 @@
       <!-- end header  -->
 
       <!-- start main body section  -->
-      <div class="container">
+      <div class="container mx-auto my-2 space-y-2">
+        <!-- start breadcrumb  -->
+        <nav class="flex mx-1" aria-label="Breadcrumb">
+          <ol class="inline-flex items-center space-x-1 md:space-x-3">
+            <li class="inline-flex items-center">
+              <a
+                href="#"
+                class="inline-flex items-center text-sm text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+              >
+                <svg
+                  class="mr-2 w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+                  ></path>
+                </svg>
+                Home
+              </a>
+            </li>
+            <li>
+              <div class="flex items-center">
+                <svg
+                  class="w-6 h-6 text-gray-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <a
+                  href="#"
+                  class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white"
+                  >CatTitle</a
+                >
+              </div>
+            </li>
+            <li aria-current="page">
+              <div class="flex items-center">
+                <svg
+                  class="w-6 h-6 text-gray-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span
+                  class="ml-1 text-sm font-medium text-gray-400 md:ml-2 dark:text-gray-500"
+                  >Products</span
+                >
+              </div>
+            </li>
+          </ol>
+        </nav>
+        <!-- end breadcrumb  -->
+
         <div
-          class="test w-full flex justify-center items-center h-96 font-semibold text-xl"
+          class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2 xl:grid-cols-9 mx-1"
         >
-          <h1 class="">Main Body</h1>
+          <!-- start filter option  -->
+          <button
+            onclick="handleFilterOption('filter')"
+            class="bg-gray-700 w-full mb-2 py-1 rounded-md hover:bg-gray-900 text-gray-100 flex items-center justify-center text-lg md:hidden"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+              />
+            </svg>
+            Click to filter
+          </button>
+          <div
+            id="filter"
+            class="hidden md:!block xl:col-span-2 w-96 md:w-full absolute mt-10 md:mt-0 md:relative"
+          >
+            <div class="rounded-lg ring-1 ring-gray-200 shadow overflow-hidden">
+              <div class="flex justify-around bg-gray-700">
+                <h2 class="w-full text-center py-2 text-lg text-gray-100">
+                  Filter Products By
+                </h2>
+                <button
+                  onclick="handleFilterOption('filter')"
+                  class="md:hidden mr-1 bg-gray-100 px-3 my-1 rounded-lg hover:bg-gray-300"
+                >
+                  X
+                </button>
+              </div>
+              <form action="#" class="text-gray-900 text-sm">
+                <div class="py-2 bg-gray-200 border-b border-gray-300">
+                  <button
+                    onclick="handleFilterOption('catOptions')"
+                    class="w-full flex justify-between items-center px-2"
+                  >
+                    <p>Category</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  <div id="catOptions" class="px-2 mt-0.5 bg-white rounded">
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="py-2 bg-gray-200 border-b border-gray-300">
+                  <button
+                    onclick="handleFilterOption('brandOptions')"
+                    class="w-full flex justify-between items-center px-2"
+                  >
+                    <p>Brand</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  <div
+                    id="brandOptions"
+                    class="hidden px-2 mt-0.5 bg-white rounded"
+                  >
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="py-2 bg-gray-200 border-b border-gray-300">
+                  <button
+                    onclick="handleFilterOption('typeOptions')"
+                    class="w-full flex justify-between items-center px-2"
+                  >
+                    <p>Product Type</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  <div
+                    id="typeOptions"
+                    class="hidden px-2 mt-0.5 bg-white rounded"
+                  >
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="py-2 bg-gray-200 border-b border-gray-300">
+                  <button
+                    onclick="handleFilterOption('colorOptions')"
+                    class="w-full flex justify-between items-center px-2"
+                  >
+                    <p>Color Family</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  <div
+                    id="colorOptions"
+                    class="hidden px-2 mt-0.5 bg-white rounded"
+                  >
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="py-2 bg-gray-200 border-b border-gray-300">
+                  <button
+                    onclick="handleFilterOption('warrantyOptions')"
+                    class="w-full flex justify-between items-center px-2"
+                  >
+                    <p>Warranty Type</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  <div
+                    id="warrantyOptions"
+                    class="hidden px-2 mt-0.5 bg-white rounded"
+                  >
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="py-2 bg-gray-200 border-b border-gray-300">
+                  <button
+                    onclick="handleFilterOption('priceOptions')"
+                    class="w-full flex justify-between items-center px-2"
+                  >
+                    <p>Price</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  <div
+                    id="priceOptions"
+                    class="hiddden p-2 mt-0.5 bg-white rounded"
+                  >
+                    <!-- <form action="#" class=""> -->
+                    <input
+                      class="w-[4.5rem] h-6 text-sm rounded"
+                      type="number"
+                      placeholder="min"
+                    />
+                    -
+                    <input
+                      class="w-[4.5rem] h-6 text-sm rounded"
+                      type="number"
+                      placeholder="max"
+                    />
+                    <button
+                      class="bg-gray-600 text-white px-2 rounded hover:bg-gray-900"
+                    >
+                      >
+                    </button>
+                    <!-- </form> -->
+                  </div>
+                </div>
+                <div class="py-2 bg-gray-200 border-b border-gray-300">
+                  <button
+                    onclick="handleFilterOption('displayOptions')"
+                    class="w-full flex justify-between items-center px-2"
+                  >
+                    <p>Display Size</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  <div
+                    id="displayOptions"
+                    class="hidden px-2 mt-0.5 bg-white rounded"
+                  >
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="py-2 bg-gray-200 border-b border-gray-300">
+                  <button
+                    onclick="handleFilterOption('ramOptions')"
+                    class="w-full flex justify-between items-center px-2"
+                  >
+                    <p>RAM</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  <div
+                    id="ramOptions"
+                    class="hidden px-2 mt-0.5 bg-white rounded"
+                  >
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="py-2 bg-gray-200 border-b border-gray-300">
+                  <button
+                    onclick="handleFilterOption('processorOptions')"
+                    class="w-full flex justify-between items-center px-2"
+                  >
+                    <p>Processor Series</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  <div
+                    id="processorOptions"
+                    class="hidden px-2 mt-0.5 bg-white rounded"
+                  >
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="py-2 bg-gray-200 border-b border-gray-300">
+                  <button
+                    onclick="handleFilterOption('graphicsOptions')"
+                    class="w-full flex justify-between items-center px-2"
+                  >
+                    <p>Graphics Card Series</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  <div
+                    id="graphicsOptions"
+                    class="hidden px-2 mt-0.5 bg-white rounded"
+                  >
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="py-2 bg-gray-200 border-b border-gray-300">
+                  <button
+                    onclick="handleFilterOption('sizeOptions')"
+                    class="w-full flex justify-between items-center px-2"
+                  >
+                    <p>Size</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  <div
+                    id="sizeOptions"
+                    class="hidden px-2 mt-0.5 bg-white rounded"
+                  >
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <input
+                        class="border-2 rounded focus:ring-0"
+                        type="checkbox"
+                        name=""
+                        id=""
+                      />
+                      <p>Category title</p>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- end filter option  -->
+          <!-- start product list  -->
+          <div
+            class="md:col-span-2 lg:col-span-3 xl:col-span-7 w-full flex flex-col space-y-4"
+          >
+            <!-- start product header & sorting option  -->
+            <div
+              class="flex items-center justify-between p-2 py-1 rounded-md bg-gray-200"
+            >
+              <h2 class="text-lg font-semibold">Group/Category/Brand Title</h2>
+              <form action="">
+                <b class="font-medium">Sort By: </b>
+                <select
+                  name=""
+                  id=""
+                  class="h-9 w-28 lg:w-48 text-sm rounded-md border focus:border-gray-700 focus:ring-0 focus:shadow-none"
+                >
+                  <option value="">Please select</option>
+                  <option value="">Price (Low to High)</option>
+                  <option value="">Price (High to Low)</option>
+                  <option value="">Name (A-Z)</option>
+                  <option value="">Name (D-Z)</option>
+                  <option value="">Newest</option>
+                  <option value="">Oldest</option>
+                </select>
+              </form>
+            </div>
+            <!-- end product header & sorting option  -->
+            <!-- start product cards group  -->
+            <div
+              class="w-full grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 justify-between"
+            >
+              <!-- start card  -->
+              <div class="flex justify-center">
+                <div
+                  class="w-[14.8rem] bg-white rounded-md shadow ring-1 hover:ring-2 hover:shadow ring-gray-200 overflow-hidden"
+                >
+                  <div class="w-full h-72 overflow-hidden">
+                    <a href="#"
+                      ><img
+                        class="w-full h-full rounded-t-md hover:scale-110"
+                        src="../images/product1.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="flex flex-col px-1 mb-0.5 w-full text-center">
+                    <a href="#"><b class="text-xl">Product Title 3</b></a>
+                    <small
+                      >Short description Short description Short description
+                      Short description
+                    </small>
+                    <p class="text-gray-600">
+                      <b class="text-red-600 font-bold text-2xl">$ 249</b>
+                      <del>$ 299</del>
+                    </p>
+                    <div
+                      class="flex items-center justify-around w-full rounded-xl mb-0.5 py-0.5 bg-gray-100 text-xs"
+                    >
+                      <span
+                        class="bg-gray-600 rounded-2xl px-2 font-semibold text-white"
+                        >17%</span
+                      >
+                      <p>Save: <b>$50</b></p>
+                    </div>
+                    <div class="flex justify-between py-2">
+                      <button
+                        class="flex bg-gray-700 text-white w-10 h-10 rounded-full items-center justify-center hover:bg-gray-800 hover:text-gray-100"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-8 w-8"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                      </button>
+                      <button
+                        class="flex justify-center items-center rounded-3xl h-10 w-40 px-4 bg-gray-700 text-white hover:bg-gray-800 hover:text-gray-100"
+                      >
+                        <svg
+                          class="flex-1 w-8 h-8 fill-current"
+                          viewbox="0 0 24 24"
+                        >
+                          <path
+                            d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"
+                          />
+                        </svg>
+                        <b>Add to Cart</b>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end card  -->
+              <!-- start card  -->
+              <div class="flex justify-center">
+                <div
+                  class="w-[14.8rem] bg-white rounded-md shadow ring-1 hover:ring-2 hover:shadow ring-gray-200 overflow-hidden"
+                >
+                  <div class="w-full h-72 overflow-hidden">
+                    <a href="#"
+                      ><img
+                        class="w-full h-full rounded-t-md hover:scale-110"
+                        src="../images/product1.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="flex flex-col px-1 mb-0.5 w-full text-center">
+                    <a href="#"><b class="text-xl">Product Title 3</b></a>
+                    <small
+                      >Short description Short description Short description
+                      Short description
+                    </small>
+                    <p class="text-gray-600">
+                      <b class="text-red-600 font-bold text-2xl">$ 249</b>
+                      <del>$ 299</del>
+                    </p>
+                    <div
+                      class="flex items-center justify-around w-full rounded-xl mb-0.5 py-0.5 bg-gray-100 text-xs"
+                    >
+                      <span
+                        class="bg-gray-600 rounded-2xl px-2 font-semibold text-white"
+                        >17%</span
+                      >
+                      <p>Save: <b>$50</b></p>
+                    </div>
+                    <div class="flex justify-between py-2">
+                      <button
+                        class="flex bg-gray-700 text-white w-10 h-10 rounded-full items-center justify-center hover:bg-gray-800 hover:text-gray-100"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-8 w-8"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                      </button>
+                      <button
+                        class="flex justify-center items-center rounded-3xl h-10 w-40 px-4 bg-gray-700 text-white hover:bg-gray-800 hover:text-gray-100"
+                      >
+                        <svg
+                          class="flex-1 w-8 h-8 fill-current"
+                          viewbox="0 0 24 24"
+                        >
+                          <path
+                            d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"
+                          />
+                        </svg>
+                        <b>Add to Cart</b>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end card  -->
+              <!-- start card  -->
+              <div class="flex justify-center">
+                <div
+                  class="w-[14.8rem] bg-white rounded-md shadow ring-1 hover:ring-2 hover:shadow ring-gray-200 overflow-hidden"
+                >
+                  <div class="w-full h-72 overflow-hidden">
+                    <a href="#"
+                      ><img
+                        class="w-full h-full rounded-t-md hover:scale-110"
+                        src="../images/product1.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="flex flex-col px-1 mb-0.5 w-full text-center">
+                    <a href="#"><b class="text-xl">Product Title 3</b></a>
+                    <small
+                      >Short description Short description Short description
+                      Short description
+                    </small>
+                    <p class="text-gray-600">
+                      <b class="text-red-600 font-bold text-2xl">$ 249</b>
+                      <del>$ 299</del>
+                    </p>
+                    <div
+                      class="flex items-center justify-around w-full rounded-xl mb-0.5 py-0.5 bg-gray-100 text-xs"
+                    >
+                      <span
+                        class="bg-gray-600 rounded-2xl px-2 font-semibold text-white"
+                        >17%</span
+                      >
+                      <p>Save: <b>$50</b></p>
+                    </div>
+                    <div class="flex justify-between py-2">
+                      <button
+                        class="flex bg-gray-700 text-white w-10 h-10 rounded-full items-center justify-center hover:bg-gray-800 hover:text-gray-100"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-8 w-8"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                      </button>
+                      <button
+                        class="flex justify-center items-center rounded-3xl h-10 w-40 px-4 bg-gray-700 text-white hover:bg-gray-800 hover:text-gray-100"
+                      >
+                        <svg
+                          class="flex-1 w-8 h-8 fill-current"
+                          viewbox="0 0 24 24"
+                        >
+                          <path
+                            d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"
+                          />
+                        </svg>
+                        <b>Add to Cart</b>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end card  -->
+              <!-- start card  -->
+              <div class="flex justify-center">
+                <div
+                  class="w-[14.8rem] bg-white rounded-md shadow ring-1 hover:ring-2 hover:shadow ring-gray-200 overflow-hidden"
+                >
+                  <div class="w-full h-72 overflow-hidden">
+                    <a href="#"
+                      ><img
+                        class="w-full h-full rounded-t-md hover:scale-110"
+                        src="../images/product1.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="flex flex-col px-1 mb-0.5 w-full text-center">
+                    <a href="#"><b class="text-xl">Product Title 3</b></a>
+                    <small
+                      >Short description Short description Short description
+                      Short description
+                    </small>
+                    <p class="text-gray-600">
+                      <b class="text-red-600 font-bold text-2xl">$ 249</b>
+                      <del>$ 299</del>
+                    </p>
+                    <div
+                      class="flex items-center justify-around w-full rounded-xl mb-0.5 py-0.5 bg-gray-100 text-xs"
+                    >
+                      <span
+                        class="bg-gray-600 rounded-2xl px-2 font-semibold text-white"
+                        >17%</span
+                      >
+                      <p>Save: <b>$50</b></p>
+                    </div>
+                    <div class="flex justify-between py-2">
+                      <button
+                        class="flex bg-gray-700 text-white w-10 h-10 rounded-full items-center justify-center hover:bg-gray-800 hover:text-gray-100"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-8 w-8"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                      </button>
+                      <button
+                        class="flex justify-center items-center rounded-3xl h-10 w-40 px-4 bg-gray-700 text-white hover:bg-gray-800 hover:text-gray-100"
+                      >
+                        <svg
+                          class="flex-1 w-8 h-8 fill-current"
+                          viewbox="0 0 24 24"
+                        >
+                          <path
+                            d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"
+                          />
+                        </svg>
+                        <b>Add to Cart</b>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end card  -->
+              <!-- start card  -->
+              <div class="flex justify-center">
+                <div
+                  class="w-[14.8rem] bg-white rounded-md shadow ring-1 hover:ring-2 hover:shadow ring-gray-200 overflow-hidden"
+                >
+                  <div class="w-full h-72 overflow-hidden">
+                    <a href="#"
+                      ><img
+                        class="w-full h-full rounded-t-md hover:scale-110"
+                        src="../images/product1.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="flex flex-col px-1 mb-0.5 w-full text-center">
+                    <a href="#"><b class="text-xl">Product Title 3</b></a>
+                    <small
+                      >Short description Short description Short description
+                      Short description
+                    </small>
+                    <p class="text-gray-600">
+                      <b class="text-red-600 font-bold text-2xl">$ 249</b>
+                      <del>$ 299</del>
+                    </p>
+                    <div
+                      class="flex items-center justify-around w-full rounded-xl mb-0.5 py-0.5 bg-gray-100 text-xs"
+                    >
+                      <span
+                        class="bg-gray-600 rounded-2xl px-2 font-semibold text-white"
+                        >17%</span
+                      >
+                      <p>Save: <b>$50</b></p>
+                    </div>
+                    <div class="flex justify-between py-2">
+                      <button
+                        class="flex bg-gray-700 text-white w-10 h-10 rounded-full items-center justify-center hover:bg-gray-800 hover:text-gray-100"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-8 w-8"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                      </button>
+                      <button
+                        class="flex justify-center items-center rounded-3xl h-10 w-40 px-4 bg-gray-700 text-white hover:bg-gray-800 hover:text-gray-100"
+                      >
+                        <svg
+                          class="flex-1 w-8 h-8 fill-current"
+                          viewbox="0 0 24 24"
+                        >
+                          <path
+                            d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"
+                          />
+                        </svg>
+                        <b>Add to Cart</b>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end card  -->
+              <!-- start card  -->
+              <div class="flex justify-center">
+                <div
+                  class="w-[14.8rem] bg-white rounded-md shadow ring-1 hover:ring-2 hover:shadow ring-gray-200 overflow-hidden"
+                >
+                  <div class="w-full h-72 overflow-hidden">
+                    <a href="#"
+                      ><img
+                        class="w-full h-full rounded-t-md hover:scale-110"
+                        src="../images/product1.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="flex flex-col px-1 mb-0.5 w-full text-center">
+                    <a href="#"><b class="text-xl">Product Title 3</b></a>
+                    <small
+                      >Short description Short description Short description
+                      Short description
+                    </small>
+                    <p class="text-gray-600">
+                      <b class="text-red-600 font-bold text-2xl">$ 249</b>
+                      <del>$ 299</del>
+                    </p>
+                    <div
+                      class="flex items-center justify-around w-full rounded-xl mb-0.5 py-0.5 bg-gray-100 text-xs"
+                    >
+                      <span
+                        class="bg-gray-600 rounded-2xl px-2 font-semibold text-white"
+                        >17%</span
+                      >
+                      <p>Save: <b>$50</b></p>
+                    </div>
+                    <div class="flex justify-between py-2">
+                      <button
+                        class="flex bg-gray-700 text-white w-10 h-10 rounded-full items-center justify-center hover:bg-gray-800 hover:text-gray-100"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-8 w-8"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                      </button>
+                      <button
+                        class="flex justify-center items-center rounded-3xl h-10 w-40 px-4 bg-gray-700 text-white hover:bg-gray-800 hover:text-gray-100"
+                      >
+                        <svg
+                          class="flex-1 w-8 h-8 fill-current"
+                          viewbox="0 0 24 24"
+                        >
+                          <path
+                            d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"
+                          />
+                        </svg>
+                        <b>Add to Cart</b>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end card  -->
+              <!-- start card  -->
+              <div class="flex justify-center">
+                <div
+                  class="w-[14.8rem] bg-white rounded-md shadow ring-1 hover:ring-2 hover:shadow ring-gray-200 overflow-hidden"
+                >
+                  <div class="w-full h-72 overflow-hidden">
+                    <a href="#"
+                      ><img
+                        class="w-full h-full rounded-t-md hover:scale-110"
+                        src="../images/product1.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="flex flex-col px-1 mb-0.5 w-full text-center">
+                    <a href="#"><b class="text-xl">Product Title 3</b></a>
+                    <small
+                      >Short description Short description Short description
+                      Short description
+                    </small>
+                    <p class="text-gray-600">
+                      <b class="text-red-600 font-bold text-2xl">$ 249</b>
+                      <del>$ 299</del>
+                    </p>
+                    <div
+                      class="flex items-center justify-around w-full rounded-xl mb-0.5 py-0.5 bg-gray-100 text-xs"
+                    >
+                      <span
+                        class="bg-gray-600 rounded-2xl px-2 font-semibold text-white"
+                        >17%</span
+                      >
+                      <p>Save: <b>$50</b></p>
+                    </div>
+                    <div class="flex justify-between py-2">
+                      <button
+                        class="flex bg-gray-700 text-white w-10 h-10 rounded-full items-center justify-center hover:bg-gray-800 hover:text-gray-100"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-8 w-8"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                      </button>
+                      <button
+                        class="flex justify-center items-center rounded-3xl h-10 w-40 px-4 bg-gray-700 text-white hover:bg-gray-800 hover:text-gray-100"
+                      >
+                        <svg
+                          class="flex-1 w-8 h-8 fill-current"
+                          viewbox="0 0 24 24"
+                        >
+                          <path
+                            d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"
+                          />
+                        </svg>
+                        <b>Add to Cart</b>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end card  -->
+              <!-- start card  -->
+              <div class="flex justify-center">
+                <div
+                  class="w-[14.8rem] bg-white rounded-md shadow ring-1 hover:ring-2 hover:shadow ring-gray-200 overflow-hidden"
+                >
+                  <div class="w-full h-72 overflow-hidden">
+                    <a href="#"
+                      ><img
+                        class="w-full h-full rounded-t-md hover:scale-110"
+                        src="../images/product1.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="flex flex-col px-1 mb-0.5 w-full text-center">
+                    <a href="#"><b class="text-xl">Product Title 3</b></a>
+                    <small
+                      >Short description Short description Short description
+                      Short description
+                    </small>
+                    <p class="text-gray-600">
+                      <b class="text-red-600 font-bold text-2xl">$ 249</b>
+                      <del>$ 299</del>
+                    </p>
+                    <div
+                      class="flex items-center justify-around w-full rounded-xl mb-0.5 py-0.5 bg-gray-100 text-xs"
+                    >
+                      <span
+                        class="bg-gray-600 rounded-2xl px-2 font-semibold text-white"
+                        >17%</span
+                      >
+                      <p>Save: <b>$50</b></p>
+                    </div>
+                    <div class="flex justify-between py-2">
+                      <button
+                        class="flex bg-gray-700 text-white w-10 h-10 rounded-full items-center justify-center hover:bg-gray-800 hover:text-gray-100"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-8 w-8"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                      </button>
+                      <button
+                        class="flex justify-center items-center rounded-3xl h-10 w-40 px-4 bg-gray-700 text-white hover:bg-gray-800 hover:text-gray-100"
+                      >
+                        <svg
+                          class="flex-1 w-8 h-8 fill-current"
+                          viewbox="0 0 24 24"
+                        >
+                          <path
+                            d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"
+                          />
+                        </svg>
+                        <b>Add to Cart</b>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end card  -->
+              <!-- start card  -->
+              <div class="flex justify-center">
+                <div
+                  class="w-[14.8rem] bg-white rounded-md shadow ring-1 hover:ring-2 hover:shadow ring-gray-200 overflow-hidden"
+                >
+                  <div class="w-full h-72 overflow-hidden">
+                    <a href="#"
+                      ><img
+                        class="w-full h-full rounded-t-md hover:scale-110"
+                        src="../images/product1.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="flex flex-col px-1 mb-0.5 w-full text-center">
+                    <a href="#"><b class="text-xl">Product Title 3</b></a>
+                    <small
+                      >Short description Short description Short description
+                      Short description
+                    </small>
+                    <p class="text-gray-600">
+                      <b class="text-red-600 font-bold text-2xl">$ 249</b>
+                      <del>$ 299</del>
+                    </p>
+                    <div
+                      class="flex items-center justify-around w-full rounded-xl mb-0.5 py-0.5 bg-gray-100 text-xs"
+                    >
+                      <span
+                        class="bg-gray-600 rounded-2xl px-2 font-semibold text-white"
+                        >17%</span
+                      >
+                      <p>Save: <b>$50</b></p>
+                    </div>
+                    <div class="flex justify-between py-2">
+                      <button
+                        class="flex bg-gray-700 text-white w-10 h-10 rounded-full items-center justify-center hover:bg-gray-800 hover:text-gray-100"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-8 w-8"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                      </button>
+                      <button
+                        class="flex justify-center items-center rounded-3xl h-10 w-40 px-4 bg-gray-700 text-white hover:bg-gray-800 hover:text-gray-100"
+                      >
+                        <svg
+                          class="flex-1 w-8 h-8 fill-current"
+                          viewbox="0 0 24 24"
+                        >
+                          <path
+                            d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"
+                          />
+                        </svg>
+                        <b>Add to Cart</b>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end card  -->
+              <!-- start card  -->
+              <div class="flex justify-center">
+                <div
+                  class="w-[14.8rem] bg-white rounded-md shadow ring-1 hover:ring-2 hover:shadow ring-gray-200 overflow-hidden"
+                >
+                  <div class="w-full h-72 overflow-hidden">
+                    <a href="#"
+                      ><img
+                        class="w-full h-full rounded-t-md hover:scale-110"
+                        src="../images/product1.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="flex flex-col px-1 mb-0.5 w-full text-center">
+                    <a href="#"><b class="text-xl">Product Title 3</b></a>
+                    <small
+                      >Short description Short description Short description
+                      Short description
+                    </small>
+                    <p class="text-gray-600">
+                      <b class="text-red-600 font-bold text-2xl">$ 249</b>
+                      <del>$ 299</del>
+                    </p>
+                    <div
+                      class="flex items-center justify-around w-full rounded-xl mb-0.5 py-0.5 bg-gray-100 text-xs"
+                    >
+                      <span
+                        class="bg-gray-600 rounded-2xl px-2 font-semibold text-white"
+                        >17%</span
+                      >
+                      <p>Save: <b>$50</b></p>
+                    </div>
+                    <div class="flex justify-between py-2">
+                      <button
+                        class="flex bg-gray-700 text-white w-10 h-10 rounded-full items-center justify-center hover:bg-gray-800 hover:text-gray-100"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-8 w-8"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                      </button>
+                      <button
+                        class="flex justify-center items-center rounded-3xl h-10 w-40 px-4 bg-gray-700 text-white hover:bg-gray-800 hover:text-gray-100"
+                      >
+                        <svg
+                          class="flex-1 w-8 h-8 fill-current"
+                          viewbox="0 0 24 24"
+                        >
+                          <path
+                            d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"
+                          />
+                        </svg>
+                        <b>Add to Cart</b>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end card  -->
+            </div>
+            <!-- end products cards group  -->
+            <!-- load more button  -->
+            <button
+              class="bg-gray-700 text-gray-100 w-full mt-4 rounded py-1 hover:bg-gray-800"
+            >
+              Load more
+            </button>
+          </div>
+          <!-- end product list  -->
         </div>
       </div>
-      <!-- end main body section  -->
+      <!-- end main  body section -->
 
       <!-- start footer section -->
       <footer class="w-full bg-gray-700 text-gray-400">
@@ -1554,6 +3070,12 @@
 
     <!-- dropdown menu js (for small device) -->
     <script src="https://unpkg.com/@themesberg/flowbite@1.3.0/dist/flowbite.bundle.js"></script>
+    <script>
+      const handleFilterOption = (divId) => {
+        var div = document.getElementById(divId);
+        div.style.display = div.style.display == "none" ? "block" : "none";
+      };
+    </script>
     <!-- end javascript -->
   </body>
 </html>

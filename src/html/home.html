@@ -174,7 +174,9 @@
       <!-- end top bar -->
 
       <!-- start main head bar -->
-      <div class="main-bar bg-white p-1 sticky top-0 z-30 md:relative">
+      <div
+        class="main-bar shadow md:shadow-none bg-white p-1 sticky top-0 z-30 md:relative"
+      >
         <div class="container mx-auto flex justify-between items-center">
           <div class="flex text-gray-700">
             <!-- satrt responsive category button for small device -->
@@ -620,33 +622,65 @@
               <div
                 class="hidden group-hover:block absolute z-50 p-2 mt-6 w-60 shadow-md rounded-b-lg bg-white text-gray-700"
               >
-                <a
-                  href="#"
-                  class="h-10 border-b-2 flex items-center justify-between hover:text-black"
-                >
-                  <div class="flex items-center">
-                    <div
-                      class="w-6 h-6 ring-2 ring-gray-600 rounded-full bg-white"
-                    >
-                      <svg
-                        class="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
+                <!-- with sub category (for test)  -->
+                <div>
+                  <button
+                    class="h-10 w-full border-b-2 flex items-center justify-between hover:text-black"
+                    id="dropdownRightStartButton"
+                    data-dropdown-toggle="subCat01"
+                    data-dropdown-placement="right-start"
+                  >
+                    <div class="flex items-center">
+                      <div
+                        class="w-6 h-6 ring-2 ring-gray-600 rounded-full bg-white"
                       >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                        />
-                      </svg>
+                        <svg
+                          class="h-6 w-6"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                          />
+                        </svg>
+                      </div>
+                      <p class="text-left p-1 ml-1 mb-0.5">Category title 01</p>
                     </div>
-                    <p class="text-left p-1 ml-1 mb-0.5">Category title 01</p>
+                    <span class="text-left"> ></span>
+                  </button>
+                  <div
+                    id="subCat01"
+                    class="hidden z-10 w-44 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
+                  >
+                    <ul class="py-1" aria-labelledby="dropdownRightStartButton">
+                      <li>
+                        <a
+                          href="#"
+                          class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                          >Sub Category - 01</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                          >Sub Category - 02</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                          >Sub Category - 03</a
+                        >
+                      </li>
+                    </ul>
                   </div>
-                  <span class="text-left"> ></span>
-                  <!-- <div class="hidden  group-hover:inline-block fixed">Sub</div> -->
-                </a>
+                </div>
                 <a
                   href="#"
                   class="h-10 border-b-2 flex items-center justify-between hover:text-black"
@@ -1345,19 +1379,32 @@
               <p class="ml-1">Online Exclusive</p>
             </a>
             <a class="px-2 flex text-white hover:text-gray-300" href="#">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="hidden h-5 pt-1 xl:block"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              <p class="ml-1">New Arrivals</p>
+              <div class="ml-1 flex flex-col group">
+                <div class="flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 pt-1"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Pages
+                </div>
+                <div
+                  class="hidden group-hover:block absolute mt-5 bg-white p-2 rounded-md"
+                >
+                  <div class="flex flex-col text-indigo-700">
+                    <a href="./home.html">Home Page</a>
+                    <a href="./product-list.html">Product List Page</a>
+                    <a href="./checkout.html">Checkout Page</a>
+                  </div>
+                </div>
+              </div>
             </a>
           </div>
           <!-- end navbar items  -->
@@ -4331,10 +4378,12 @@
 
       <!-- start footer section -->
       <footer class="w-full bg-gray-700 text-gray-400">
-        <div class="container mx-auto flex flex-col py-5">
-          <div class="flex flex-col md:flex-row justify-between font-semibold">
-            <div class="flex flex-col w-72 rounded-md p-2">
-              <h2 class="mb-1 text-lg font-semibold border-b">
+        <div class="container mx-auto flex flex-col py-5 space-y-4">
+          <div
+            class="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 font-semibold"
+          >
+            <div class="flex flex-col p-2">
+              <h2 class="mb-1 text-lg font-semibold border-b border-b-gray-400">
                 Join Our Mailing List
               </h2>
               <form action="#">
@@ -4344,12 +4393,12 @@
                   placeholder="Enter your email address"
                 />
                 <button
-                  class="float-right bg-gray-800 px-3 py-1 mt-1 rounded-sm"
+                  class="float-right bg-gray-800 px-3 py-1 mt-1 rounded-sm hover:bg-gray-200 hover:text-gray-700"
                 >
                   Subscribe
                 </button>
               </form>
-              <p class="border-b mt-6">Follow PUCShop</p>
+              <p class="border-b border-b-gray-400 mt-6">Follow PUCShop</p>
               <div class="flex justify-start space-x-3">
                 <img
                   src="https://img.icons8.com/fluency/28/000000/facebook-new.png"
@@ -4368,8 +4417,10 @@
                 />
               </div>
             </div>
-            <div class="flex flex-col w-72 rounded-md p-2">
-              <h2 class="mb-1 text-lg font-semibold border-b">Customer Care</h2>
+            <div class="flex flex-col p-2">
+              <h2 class="mb-1 text-lg font-semibold border-b border-b-gray-400">
+                Customer Care
+              </h2>
               <ul class="text-sm">
                 <li><a href="#">Corporate Sales</a></li>
                 <li><a href="#">FAQ</a></li>
@@ -4380,8 +4431,8 @@
                 <li><a href="#">Contact Us</a></li>
               </ul>
             </div>
-            <div class="flex flex-col w-72 rounded-md p-2">
-              <h2 class="mb-1 text-lg font-semibold border-b">
+            <div class="flex flex-col p-2">
+              <h2 class="mb-1 text-lg font-semibold border-b border-b-gray-400">
                 PUCShop Services
               </h2>
               <ul class="text-sm">
@@ -4393,8 +4444,10 @@
                 <li><a href="#">PUCShop Gift Card</a></li>
               </ul>
             </div>
-            <div class="flex flex-col w-72 rounded-md p-2">
-              <h2 class="mb-1 text-lg font-semibold border-b">About PUCShop</h2>
+            <div class="flex flex-col p-2">
+              <h2 class="mb-1 text-lg font-semibold border-b border-b-gray-400">
+                About PUCShop
+              </h2>
               <ul class="text-sm">
                 <li><a href="#">Who We Are</a></li>
                 <li><a href="#">Corporate Governance</a></li>
@@ -4405,7 +4458,7 @@
               </ul>
             </div>
           </div>
-          <div class="flex flex-col md:flex-row justify-between mt-10">
+          <div class="grid gap-4 grid-cols-1 md:grid-cols-2 font-semibold mx-1">
             <div class="flex flex-col">
               <h2 class="mb-1 text-lg font-semibold border-b">
                 Payment Method
@@ -4448,12 +4501,14 @@
                 </div>
               </div>
             </div>
-            <div class="text-sm mt-9 font-semibold">
-              <p class="">
-                <a href="#">Privacy Policy</a> |
-                <a href="#">Terms of Service</a>
-              </p>
-              <p class="float-right">Copyright © 2022</p>
+            <div class="w-full mt-9">
+              <div class="float-right">
+                <p class="">
+                  <a href="#">Privacy Policy</a> |
+                  <a href="#">Terms of Service</a>
+                </p>
+                <p class="float-right">Copyright © 2022</p>
+              </div>
             </div>
           </div>
         </div>
