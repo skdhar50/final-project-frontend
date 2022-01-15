@@ -1404,294 +1404,199 @@
       <div class="container mx-auto my-3">
         <!-- start order list  -->
         <div
-          class="m-1 p-4 bg-slate-200 rounded shadow overflow-hidden flex flex-col items-center space-y-1"
+          class="m-1 p-4 bg-slate-200 rounded shadow overflow-hidden flex flex-col items-center space-y-4"
         >
-          <div class="w-full xl:w-5/6 flex justify-between">
-            <h2 class="font-semibold text-3xl">My Orders</h2>
-            <select name="" id="" class="w-64 rounded-md">
-              <option value="">Show by ascending order</option>
-              <option value="" selected>Show by descending order</option>
-              <option value="">Last 5 orders</option>
-              <option value="">Last 15 days</option>
-              <option value="">Last 30 days</option>
-              <option value="">Last 6 months</option>
-              <option value="">All orders</option>
-            </select>
+          <h2 class="font-semibold text-3xl">My Orders</h2>
+          <!-- start single order  -->
+          <div
+            class="flex justify-between p-2 shadow rounded-md bg-white w-full lg:w-5/6"
+          >
+            <div
+              class="w-16 h-16 border flex items-center justify-center rounded-full shadow-md text-2xl font-bold"
+            >
+              05
+            </div>
+            <div class="h-16 flex flex-col">
+              <h2 class="text-gray-600">Order NO:</h2>
+              <h2 class="text-xl font-semibold">#615896142343748</h2>
+            </div>
+            <div class="h-16 flex flex-col">
+              <h2 class="text-gray-600">Placed on:</h2>
+              <h2 class="text-xl font-semibold">15 January 2022</h2>
+            </div>
+            <div class="h-16 flex flex-col">
+              <h2 class="text-gray-600">Status:</h2>
+              <h2 class="text-xl font-semibold text-yellow-500">Pending</h2>
+            </div>
+            <div class="h-16 flex flex-col">
+              <h2 class="text-gray-600">Total Item:</h2>
+              <h2 class="text-xl font-semibold">07</h2>
+            </div>
+            <div class="h-16 flex flex-col">
+              <h2 class="text-gray-600">Total Price:</h2>
+              <h2 class="text-xl font-semibold">$748</h2>
+            </div>
+            <div class="h-16 flex flex-col justify-center">
+              <button
+                class="bg-gray-600 text-white p-3 rounded-md hover:bg-gray-900"
+              >
+                MANAGE
+              </button>
+            </div>
           </div>
-          <table class="w-full xl:w-5/6 text-sm md:text-base table-row-space">
-            <tbody class="">
-              <tr class="shadow bg-white">
-                <td class="rounded-l-md">
-                  <div
-                    class="h-12 w-12 lg:w-16 lg:h-16 m-2 border flex items-center justify-center rounded-full shadow-md lg:text-2xl font-bold"
-                  >
-                    05
-                  </div>
-                </td>
-                <td class="">
-                  <div class="h-12 lg:h-16 flex flex-col justify-center">
-                    <h2 class="text-gray-600">Order ID:</h2>
-                    <h2 class="lg:text-xl font-semibold">#61582343922</h2>
-                  </div>
-                </td>
-                <td>
-                  <div class="h-12 lg:h-16 flex flex-col justify-center">
-                    <h2 class="text-gray-600">Placed on:</h2>
-                    <h2 class="lg:text-xl font-semibold">15 January 2022</h2>
-                  </div>
-                </td>
-                <td>
-                  <div class="h-12 lg:h-16 flex flex-col justify-center">
-                    <h2 class="text-gray-600">Status:</h2>
-                    <h2 class="lg:text-xl font-semibold text-yellow-500">
-                      Pending
-                    </h2>
-                  </div>
-                </td>
-                <td class="">
-                  <div
-                    class="hidden h-12 lg:h-16 sm:flex flex-col justify-center"
-                  >
-                    <h2 class="text-gray-600">Total Item:</h2>
-                    <h2 class="lg:text-xl font-semibold">02</h2>
-                  </div>
-                </td>
-                <td class="">
-                  <div
-                    class="hidden h-12 lg:h-16 md:flex flex-col justify-center"
-                  >
-                    <h2 class="text-gray-600">Total Price:</h2>
-                    <h2 class="lg:text-xl font-semibold">$157</h2>
-                  </div>
-                </td>
-                <td class="rounded-r-md">
-                  <div class="h-12 lg:h-16 m-2 flex items-center justify-end">
-                    <button
-                      class="bg-gray-600 text-white float-right p-1 lg:p-3 rounded-md hover:bg-gray-900"
-                    >
-                      MANAGE
-                    </button>
-                  </div>
-                </td>
-              </tr>
-              <tr class="shadow bg-white">
-                <td class="rounded-l-md">
-                  <div
-                    class="h-12 w-12 lg:w-16 lg:h-16 m-2 border flex items-center justify-center rounded-full shadow-md lg:text-2xl font-bold"
-                  >
-                    04
-                  </div>
-                </td>
-                <td class="">
-                  <div class="h-12 lg:h-16 flex flex-col justify-center">
-                    <h2 class="text-gray-600">Order ID:</h2>
-                    <h2 class="lg:text-xl font-semibold">#61582343896</h2>
-                  </div>
-                </td>
-                <td>
-                  <div class="h-12 lg:h-16 flex flex-col justify-center">
-                    <h2 class="text-gray-600">Placed on:</h2>
-                    <h2 class="lg:text-xl font-semibold">08 January 2022</h2>
-                  </div>
-                </td>
-                <td>
-                  <div class="h-12 lg:h-16 flex flex-col justify-center">
-                    <h2 class="text-gray-600">Status:</h2>
-                    <h2 class="lg:text-xl font-semibold text-indigo-500">
-                      Processing
-                    </h2>
-                  </div>
-                </td>
-                <td class="">
-                  <div
-                    class="hidden h-12 lg:h-16 sm:flex flex-col justify-center"
-                  >
-                    <h2 class="text-gray-600">Total Item:</h2>
-                    <h2 class="lg:text-xl font-semibold">08</h2>
-                  </div>
-                </td>
-                <td class="">
-                  <div
-                    class="hidden h-12 lg:h-16 md:flex flex-col justify-center"
-                  >
-                    <h2 class="text-gray-600">Total Price:</h2>
-                    <h2 class="lg:text-xl font-semibold">$895</h2>
-                  </div>
-                </td>
-                <td class="rounded-r-md">
-                  <div class="h-12 lg:h-16 m-2 flex items-center justify-end">
-                    <button
-                      class="bg-gray-600 text-white float-right p-1 lg:p-3 rounded-md hover:bg-gray-900"
-                    >
-                      MANAGE
-                    </button>
-                  </div>
-                </td>
-              </tr>
-              <tr class="shadow bg-white">
-                <td class="rounded-l-md">
-                  <div
-                    class="h-12 w-12 lg:w-16 lg:h-16 m-2 border flex items-center justify-center rounded-full shadow-md lg:text-2xl font-bold"
-                  >
-                    03
-                  </div>
-                </td>
-                <td class="">
-                  <div class="h-12 lg:h-16 flex flex-col justify-center">
-                    <h2 class="text-gray-600">Order ID:</h2>
-                    <h2 class="lg:text-xl font-semibold">#61582343855</h2>
-                  </div>
-                </td>
-                <td>
-                  <div class="h-12 lg:h-16 flex flex-col justify-center">
-                    <h2 class="text-gray-600">Placed on:</h2>
-                    <h2 class="lg:text-xl font-semibold">01 January 2022</h2>
-                  </div>
-                </td>
-                <td>
-                  <div class="h-12 lg:h-16 flex flex-col justify-center">
-                    <h2 class="text-gray-600">Status:</h2>
-                    <h2 class="lg:text-xl font-semibold text-cyan-500">
-                      Shipping
-                    </h2>
-                  </div>
-                </td>
-                <td class="">
-                  <div
-                    class="hidden h-12 lg:h-16 sm:flex flex-col justify-center"
-                  >
-                    <h2 class="text-gray-600">Total Item:</h2>
-                    <h2 class="lg:text-xl font-semibold">03</h2>
-                  </div>
-                </td>
-                <td class="">
-                  <div
-                    class="hidden h-12 lg:h-16 md:flex flex-col justify-center"
-                  >
-                    <h2 class="text-gray-600">Total Price:</h2>
-                    <h2 class="lg:text-xl font-semibold">$866</h2>
-                  </div>
-                </td>
-                <td class="rounded-r-md">
-                  <div class="h-12 lg:h-16 m-2 flex items-center justify-end">
-                    <button
-                      class="bg-gray-600 text-white float-right p-1 lg:p-3 rounded-md hover:bg-gray-900"
-                    >
-                      MANAGE
-                    </button>
-                  </div>
-                </td>
-              </tr>
-              <tr class="shadow bg-white">
-                <td class="rounded-l-md">
-                  <div
-                    class="h-12 w-12 lg:w-16 lg:h-16 m-2 border flex items-center justify-center rounded-full shadow-md lg:text-2xl font-bold"
-                  >
-                    02
-                  </div>
-                </td>
-                <td class="">
-                  <div class="h-12 lg:h-16 flex flex-col justify-center">
-                    <h2 class="text-gray-600">Order ID:</h2>
-                    <h2 class="lg:text-xl font-semibold">#61582343831</h2>
-                  </div>
-                </td>
-                <td>
-                  <div class="h-12 lg:h-16 flex flex-col justify-center">
-                    <h2 class="text-gray-600">Placed on:</h2>
-                    <h2 class="lg:text-xl font-semibold">31 December 2022</h2>
-                  </div>
-                </td>
-                <td>
-                  <div class="h-12 lg:h-16 flex flex-col justify-center">
-                    <h2 class="text-gray-600">Status:</h2>
-                    <h2 class="lg:text-xl font-semibold text-red-500">
-                      Cancelled
-                    </h2>
-                  </div>
-                </td>
-                <td class="">
-                  <div
-                    class="hidden h-12 lg:h-16 sm:flex flex-col justify-center"
-                  >
-                    <h2 class="text-gray-600">Total Item:</h2>
-                    <h2 class="lg:text-xl font-semibold">05</h2>
-                  </div>
-                </td>
-                <td class="">
-                  <div
-                    class="hidden h-12 lg:h-16 md:flex flex-col justify-center"
-                  >
-                    <h2 class="text-gray-600">Total Price:</h2>
-                    <h2 class="lg:text-xl font-semibold">$531</h2>
-                  </div>
-                </td>
-                <td class="rounded-r-md">
-                  <div class="h-12 lg:h-16 m-2 flex items-center justify-end">
-                    <button
-                      class="bg-gray-600 text-white float-right p-1 lg:p-3 rounded-md hover:bg-gray-900"
-                    >
-                      MANAGE
-                    </button>
-                  </div>
-                </td>
-              </tr>
-              <tr class="shadow bg-white">
-                <td class="rounded-l-md">
-                  <div
-                    class="h-12 w-12 lg:w-16 lg:h-16 m-2 border flex items-center justify-center rounded-full shadow-md lg:text-2xl font-bold"
-                  >
-                    01
-                  </div>
-                </td>
-                <td class="">
-                  <div class="h-12 lg:h-16 flex flex-col justify-center">
-                    <h2 class="text-gray-600">Order ID:</h2>
-                    <h2 class="lg:text-xl font-semibold">#61582343748</h2>
-                  </div>
-                </td>
-                <td>
-                  <div class="h-12 lg:h-16 flex flex-col justify-center">
-                    <h2 class="text-gray-600">Placed on:</h2>
-                    <h2 class="lg:text-xl font-semibold">23 December 2021</h2>
-                  </div>
-                </td>
-                <td>
-                  <div class="h-12 lg:h-16 flex flex-col justify-center">
-                    <h2 class="text-gray-600">Status:</h2>
-                    <h2 class="lg:text-xl font-semibold text-green-500">
-                      Received
-                    </h2>
-                  </div>
-                </td>
-                <td class="">
-                  <div
-                    class="hidden h-12 lg:h-16 sm:flex flex-col justify-center"
-                  >
-                    <h2 class="text-gray-600">Total Item:</h2>
-                    <h2 class="lg:text-xl font-semibold">07</h2>
-                  </div>
-                </td>
-                <td class="">
-                  <div
-                    class="hidden h-12 lg:h-16 md:flex flex-col justify-center"
-                  >
-                    <h2 class="text-gray-600">Total Price:</h2>
-                    <h2 class="lg:text-xl font-semibold">$748</h2>
-                  </div>
-                </td>
-                <td class="rounded-r-md">
-                  <div class="h-12 lg:h-16 m-2 flex items-center justify-end">
-                    <button
-                      class="bg-gray-600 text-white float-right p-1 lg:p-3 rounded-md hover:bg-gray-900"
-                    >
-                      MANAGE
-                    </button>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <!-- end single order  -->
+          <!-- start single order  -->
+          <div
+            class="flex justify-between p-2 shadow rounded-md bg-white w-full lg:w-5/6"
+          >
+            <div
+              class="w-16 h-16 border flex items-center justify-center rounded-full shadow-md text-2xl font-bold"
+            >
+              04
+            </div>
+            <div class="h-16 flex flex-col">
+              <h2 class="text-gray-600">Order NO:</h2>
+              <h2 class="text-xl font-semibold">#615896142343705</h2>
+            </div>
+            <div class="h-16 flex flex-col">
+              <h2 class="text-gray-600">Placed on:</h2>
+              <h2 class="text-xl font-semibold">15 January 2022</h2>
+            </div>
+            <div class="h-16 flex flex-col">
+              <h2 class="text-gray-600">Status:</h2>
+              <h2 class="text-xl font-semibold text-cyan-500">Processing</h2>
+            </div>
+            <div class="h-16 flex flex-col">
+              <h2 class="text-gray-600">Total Item:</h2>
+              <h2 class="text-xl font-semibold">07</h2>
+            </div>
+            <div class="h-16 flex flex-col">
+              <h2 class="text-gray-600">Total Price:</h2>
+              <h2 class="text-xl font-semibold">$748</h2>
+            </div>
+            <div class="h-16 flex flex-col justify-center">
+              <button
+                class="bg-gray-600 text-white p-3 rounded-md hover:bg-gray-900"
+              >
+                MANAGE
+              </button>
+            </div>
+          </div>
+          <!-- end single order  -->
+          <!-- start single order  -->
+          <div
+            class="flex justify-between p-2 shadow rounded-md bg-white w-full lg:w-5/6"
+          >
+            <div
+              class="w-16 h-16 border flex items-center justify-center rounded-full shadow-md text-2xl font-bold"
+            >
+              03
+            </div>
+            <div class="h-16 flex flex-col">
+              <h2 class="text-gray-600">Order NO:</h2>
+              <h2 class="text-xl font-semibold">#615896142343690</h2>
+            </div>
+            <div class="h-16 flex flex-col">
+              <h2 class="text-gray-600">Placed on:</h2>
+              <h2 class="text-xl font-semibold">15 January 2022</h2>
+            </div>
+            <div class="h-16 flex flex-col">
+              <h2 class="text-gray-600">Status:</h2>
+              <h2 class="text-xl font-semibold text-indigo-500">Shipping</h2>
+            </div>
+            <div class="h-16 flex flex-col">
+              <h2 class="text-gray-600">Total Item:</h2>
+              <h2 class="text-xl font-semibold">07</h2>
+            </div>
+            <div class="h-16 flex flex-col">
+              <h2 class="text-gray-600">Total Price:</h2>
+              <h2 class="text-xl font-semibold">$748</h2>
+            </div>
+            <div class="h-16 flex flex-col justify-center">
+              <button
+                class="bg-gray-600 text-white p-3 rounded-md hover:bg-gray-900"
+              >
+                MANAGE
+              </button>
+            </div>
+          </div>
+          <!-- end single order  -->
+          <!-- start single order  -->
+          <div
+            class="flex justify-between p-2 shadow rounded-md bg-white w-full lg:w-5/6"
+          >
+            <div
+              class="w-16 h-16 border flex items-center justify-center rounded-full shadow-md text-2xl font-bold"
+            >
+              02
+            </div>
+            <div class="h-16 flex flex-col">
+              <h2 class="text-gray-600">Order NO:</h2>
+              <h2 class="text-xl font-semibold">#615896142343687</h2>
+            </div>
+            <div class="h-16 flex flex-col">
+              <h2 class="text-gray-600">Placed on:</h2>
+              <h2 class="text-xl font-semibold">15 January 2022</h2>
+            </div>
+            <div class="h-16 flex flex-col">
+              <h2 class="text-gray-600">Status:</h2>
+              <h2 class="text-xl font-semibold text-red-500">Cancelled</h2>
+            </div>
+            <div class="h-16 flex flex-col">
+              <h2 class="text-gray-600">Total Item:</h2>
+              <h2 class="text-xl font-semibold">07</h2>
+            </div>
+            <div class="h-16 flex flex-col">
+              <h2 class="text-gray-600">Total Price:</h2>
+              <h2 class="text-xl font-semibold">$748</h2>
+            </div>
+            <div class="h-16 flex flex-col justify-center">
+              <button
+                class="bg-gray-600 text-white p-3 rounded-md hover:bg-gray-900"
+              >
+                MANAGE
+              </button>
+            </div>
+          </div>
+          <!-- end single order  -->
+          <!-- start single order  -->
+          <div
+            class="flex justify-between p-2 shadow rounded-md bg-white w-full lg:w-5/6"
+          >
+            <div
+              class="w-16 h-16 border flex items-center justify-center rounded-full shadow-md text-2xl font-bold"
+            >
+              01
+            </div>
+            <div class="h-16 flex flex-col">
+              <h2 class="text-gray-600">Order NO:</h2>
+              <h2 class="text-xl font-semibold">#615896142343645</h2>
+            </div>
+            <div class="h-16 flex flex-col">
+              <h2 class="text-gray-600">Placed on:</h2>
+              <h2 class="text-xl font-semibold">15 January 2022</h2>
+            </div>
+            <div class="h-16 flex flex-col">
+              <h2 class="text-gray-600">Status:</h2>
+              <h2 class="text-xl font-semibold text-green-500">Received</h2>
+            </div>
+            <div class="h-16 flex flex-col">
+              <h2 class="text-gray-600">Total Item:</h2>
+              <h2 class="text-xl font-semibold">07</h2>
+            </div>
+            <div class="h-16 flex flex-col">
+              <h2 class="text-gray-600">Total Price:</h2>
+              <h2 class="text-xl font-semibold">$748</h2>
+            </div>
+            <div class="h-16 flex flex-col justify-center">
+              <button
+                class="bg-gray-600 text-white p-3 rounded-md hover:bg-gray-900"
+              >
+                MANAGE
+              </button>
+            </div>
+          </div>
+          <!-- end single order  -->
         </div>
         <!-- end order list  -->
       </div>
