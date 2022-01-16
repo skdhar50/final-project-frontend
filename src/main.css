@@ -45,6 +45,17 @@
   }
   /* end product slider navigation button  */
 
+  /* start header  */
+  .cat-title:hover .cat-icon {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity));
+    /* border: solid white 5px; */
+  }
+  .cat-item:hover .sub-cat {
+    display: block;
+  }
+  /* end header  */
+
   /* start table  */
   .table-row-space {
     border-collapse: separate;
