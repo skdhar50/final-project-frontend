@@ -54,6 +54,9 @@
   .cat-item:hover .sub-cat {
     display: block;
   }
+  .search-box:focus .search-suggestions {
+    display: block;
+  }
   /* end header  */
 
   /* start table  */
