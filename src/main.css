@@ -40,9 +40,6 @@
     content: ">";
     @apply text-white;
   }
-  .lSPager {
-    @apply !z-5;
-  }
   /* end product slider navigation button  */
 
   /* start header  */
@@ -53,10 +50,11 @@
   }
   .cat-item:hover .sub-cat {
     display: block;
+    /* @apply h-36 overflow-x-hidden; */
+    /* -webkit-transform: translateY(100%); */
+    /* transition: 0.5s; */
   }
-  .search-box:focus .search-suggestions {
-    display: block;
-  }
+
   /* end header  */
 
   /* start table  */
