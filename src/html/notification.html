@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header - Footer | CSE Final Project</title>
+
+    <!-- tailwind css  -->
+    <link rel="stylesheet" href="../../dist/output.css" />
+
+    <!-- Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/58f7a860b5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="h-screen">
+    <main class="bg-gray-50">
+      <!-- start header  -->
+
+      <!-- end header  -->
+
+      <!-- start main body section  -->
+      <div class="container mx-auto">
+        <div
+          class="test w-full flex justify-center items-center h-96 font-semibold text-xl"
+        >
+          <h1 class="">Main Body</h1>
+        </div>
+      </div>
+      <!-- end main body section  -->
+
+      <!-- start footer section -->
+
+      <!-- end footer section -->
+    </main>
+
+    <!-- start javascript  -->
+
+    <script>
+      const openNav = (divId) => {
+        document.getElementById(divId).style.width = "300px";
+      };
+
+      const closeNav = (divId) => {
+        document.getElementById(divId).style.width = "0";
+      };
+      const openSearchBox = (divId) => {
+        var div = document.getElementById(divId);
+        document.getElementById(divId).style.height =
+          document.getElementById(divId).style.height === "3rem"
+            ? "0rem"
+            : "3rem";
+      };
+      const openSuggestionBox = (data) => {
+        divId = "suggestion-box";
+        document.getElementById(divId).style.height =
+          data.length === 0 ? "0px" : "16rem";
+      };
+    </script>
+    <!-- end javascript -->
+  </body>
+</html>
