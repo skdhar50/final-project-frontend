@@ -34,7 +34,7 @@
 			<!-- Left Nav Small -->
 			<div
 				class="sm:hidden"
-				:class="{'bg-black bg-opacity-50 absolute z-30 inset-0':lft_open===true, '':lft_open===false}"
+				:class="{'bg-black h-screen bg-opacity-50 fixed z-30 inset-0':lft_open===true, '':lft_open===false}"
 			>
 				<nav
 					class="fixed opacity-0 transform duration-300 z-10 w-80 bg-gray-200 text-gray-800 h-screen overflow-scroll p-3"
@@ -748,7 +748,7 @@
 			</div>
 
 			<!-- Main Nav Small -->
-			<div class="relative z-0 sm:hidden">
+			<div class="sticky top-0 z-10 sm:hidden">
 				<header class="flex justify-between bg-gray-700">
 					<span class="flex">
 						<button
@@ -825,7 +825,7 @@
 			<!-- Right Nav Small -->
 			<div
 				class="sm:hidden"
-				:class="{'bg-black bg-opacity-50 absolute inset-0':rgt_open===true, '':rgt_open===false}"
+				:class="{'bg-black bg-opacity-50 h-screen fixed inset-0 z-30':rgt_open===true, '':rgt_open===false}"
 			>
 				<nav
 					class="fixed opacity-0 top-0 transform duration-300 z-10 w-80 bg-gray-200 text-gray-800 h-full p-3"
@@ -1057,7 +1057,7 @@
 			<!-- Small Screen Nav Section End -->
 			<!-- end sidebars for small device  -->
 
-			
+
 			<!-- start top bar -->
 			<div class="md top-bar bg-slate-100 py-1 text-gray-700 hidden md:block">
 				<div class="container mx-auto flex justify-between">
