@@ -745,7 +745,7 @@
 			</div>
 
 			<!-- Main Nav Small -->
-			<div class="sticky top-0 z-10 sm:hidden">
+			<div class="fixed w-full top-0 z-10 sm:hidden">
 				<header class="flex justify-between bg-gray-700">
 					<span class="flex">
 						<button
@@ -767,12 +767,12 @@
 								/>
 							</svg>
 						</button>
-						<span class="block text-2xl font-bold p-4 text-white"
-							>PUC Shop</span
+						<a href="../../index.html"class="block text-2xl font-bold p-4 text-white"
+							>PUC Shop</a
 						>
 					</span>
 					<div class="text-white flex justify-between items-center">
-						<span
+						<a href="cart.html"
 							class="flex space-x-3 items-center border rounded-lg py-1 px-2 cursor-pointer"
 						>
 							<span class="">
@@ -795,7 +795,7 @@
 								class="bg-gray-200 rounded-full px-2 font-semibold text-red-500"
 								>3</span
 							>
-						</span>
+						</a>
 						<button
 							class="text-white p-4 rounded-xl focus:bg-gray-600 focus:outline-none"
 							@click="rgt_open = true"
@@ -870,7 +870,7 @@
 									/>
 								</svg>
 							</span>
-							<a href="" class="block px-4 py-2 hover:bg-gray-700 rounded-md"
+							<a href="login.html" class="px-4 py-2 rounded-md"
 								>Login / Register</a
 							>
 						</li>
@@ -891,7 +891,7 @@
 									/>
 								</svg>
 							</span>
-							<a href="" class="block px-4 py-2 hover:bg-gray-700 rounded-md"
+							<a href="userProfile.html" class="block px-4 py-2 hover:bg-gray-700 rounded-md"
 								>Profile</a
 							>
 						</li>
@@ -929,11 +929,35 @@
 										stroke-linecap="round"
 										stroke-linejoin="round"
 										stroke-width="2"
+										d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+									/>
+								</svg>
+							</span>
+							<a href="notification.html" class="block px-4 py-2 rounded-md"
+								>Notifications</a
+							>
+							<div class="bg-gray-700 text-white font-medium rounded-full px-2">
+								3
+							</div>
+						</li>
+						<li class="flex justify-start items-center">
+							<span class="">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="h-6 w-6"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
 										d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
 									/>
 								</svg>
 							</span>
-							<a href="" class="block px-4 py-2 hover:bg-gray-700 rounded-md"
+							<a href="cart.html" class="block px-4 py-2 rounded-md"
 								>My Cart</a
 							>
 						</li>
@@ -954,7 +978,7 @@
 									/>
 								</svg>
 							</span>
-							<a href="" class="block px-4 py-2 hover:bg-gray-700 rounded-md"
+							<a href="my-orders.html" class="block px-4 py-2 rounded-md"
 								>My Orders</a
 							>
 						</li>
