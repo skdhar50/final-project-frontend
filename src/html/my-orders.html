@@ -2439,7 +2439,7 @@
 			<div class="container mx-auto mb-3 px-2 pt-16 md:pt-3">
 				<!-- start order list  -->
 				<div
-					class="m-1 bg-slate-100 rounded shadow overflow-hidden flex flex-col items-center space-y-1"
+					class="m-1 bg-slate-50 rounded overflow-hidden flex flex-col items-center space-y-1"
 				>
 					<div
 						class="w-full xl:w-5/6 flex flex-col md:flex-row justify-between space-y-2 md:space-y-0"
@@ -2457,7 +2457,7 @@
 							</select>
 						</div>
 					</div>
-					<table class="w-full xl:w-5/6 text-sm md:text-base table-row-space">
+					<table class="hidden w-full sm:block xl:w-5/6 text-sm md:text-base table-row-space">
 						<tbody class="">
 							<tr class="shadow bg-white">
 								<td class="rounded-l-md">
@@ -2731,6 +2731,155 @@
 							</tr>
 						</tbody>
 					</table>
+
+					<!-- List for small screen -->
+					<div class="flex sm:hidden flex-col justify-start w-full py-2 space-y-2">
+						<div class="flex w-full border shadow-md bg-gray-100 rounded-lg justify-evenly space-x-1 items-center">
+							<div class="px-3 py-2 text-lg font-semibold">1</div>
+							<div class="px-6 my-2 w-full space-y-2 border-l-[1px] border-indigo-200">
+								<div class="">
+									<div class="">Order ID: #6577555848</div>
+									<div class="text-gray-600 text-sm italic">5 Jan, 2022</div>
+								</div>
+								<div class="flex space-x-2 justify-evenly w-full items-center text-sm">
+									<div class="">
+										<span class="font-medium">Items:</span>
+										<span class="">3</span>
+									</div>
+									<div class="">
+										<span class="font-medium">Amount:</span>
+										<span class="">3000</span>
+									</div>
+									<div class="">
+										<span class="font-medium">Status:</span>
+										<span class="text-yellow-600">Pending</span>
+									</div>
+								</div>
+								<div class="flex justify-end mt-1">
+									<button class="bg-indigo-500 px-3 py-0.5 rounded mt-2 text-white uppercase text-sm">
+										<a href="orderDetails.html">manage</a>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="flex w-full border shadow-md bg-gray-100 rounded-lg justify-evenly space-x-1 items-center">
+							<div class="px-3 py-2 text-lg font-semibold">2</div>
+							<div class="px-6 my-2 w-full space-y-2 border-l-[1px] border-indigo-200">
+								<div class="">
+									<div class="">Order ID: #6577555848</div>
+									<div class="text-gray-600 text-sm italic">5 Jan, 2022</div>
+								</div>
+								<div class="flex space-x-2 justify-evenly w-full items-center text-sm">
+									<div class="">
+										<span class="font-medium">Items:</span>
+										<span class="">3</span>
+									</div>
+									<div class="">
+										<span class="font-medium">Amount:</span>
+										<span class="">3000</span>
+									</div>
+									<div class="">
+										<span class="font-medium">Status:</span>
+										<span class="text-blue-500">Processing</span>
+									</div>
+								</div>
+								<div class="flex justify-end mt-1">
+									<button class="bg-indigo-500 px-3 py-0.5 rounded mt-2 text-white uppercase text-sm">
+										<a href="orderDetails.html">manage</a>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="flex w-full border shadow-md bg-gray-100 rounded-lg justify-evenly space-x-1 items-center">
+							<div class="px-3 py-2 text-lg font-semibold">3</div>
+							<div class="px-6 my-2 w-full space-y-2 border-l-[1px] border-indigo-200">
+								<div class="">
+									<div class="">Order ID: #6577555848</div>
+									<div class="text-gray-600 text-sm italic">5 Jan, 2022</div>
+								</div>
+								<div class="flex space-x-2 justify-evenly w-full items-center text-sm">
+									<div class="">
+										<span class="font-medium">Items:</span>
+										<span class="">3</span>
+									</div>
+									<div class="">
+										<span class="font-medium">Amount:</span>
+										<span class="">3000</span>
+									</div>
+									<div class="">
+										<span class="font-medium">Status:</span>
+										<span class="text-cyan-500">Shipped</span>
+									</div>
+								</div>
+								<div class="flex justify-end mt-1">
+									<button class="bg-indigo-500 px-3 py-0.5 rounded mt-2 text-white uppercase text-sm">
+										<a href="orderDetails.html">manage</a>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="flex w-full border shadow-md bg-gray-100 rounded-lg justify-evenly space-x-1 items-center">
+							<div class="px-3 py-2 text-lg font-semibold">4</div>
+							<div class="px-6 my-2 w-full space-y-2 border-l-[1px] border-indigo-200">
+								<div class="">
+									<div class="">Order ID: #6577555848</div>
+									<div class="text-gray-600 text-sm italic">5 Jan, 2022</div>
+								</div>
+								<div class="flex space-x-2 justify-evenly w-full items-center text-sm">
+									<div class="">
+										<span class="font-medium">Items:</span>
+										<span class="">3</span>
+									</div>
+									<div class="">
+										<span class="font-medium">Amount:</span>
+										<span class="">3000</span>
+									</div>
+									<div class="">
+										<span class="font-medium">Status:</span>
+										<span class="text-red-600">Cancelled</span>
+									</div>
+								</div>
+								<div class="flex justify-end mt-1">
+									<button class="bg-indigo-500 px-3 py-0.5 rounded mt-2 text-white uppercase text-sm">
+										<a href="orderDetails.html">manage</a>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="flex w-full border shadow-md bg-gray-100 rounded-lg justify-evenly space-x-1 items-center">
+							<div class="px-3 py-2 text-lg font-semibold">5</div>
+							<div class="px-6 my-2 w-full space-y-2 border-l-[1px] border-indigo-200">
+								<div class="">
+									<div class="">Order ID: #6577555848</div>
+									<div class="text-gray-600 text-sm italic">5 Jan, 2022</div>
+								</div>
+								<div class="flex space-x-2 justify-evenly w-full items-center text-sm">
+									<div class="">
+										<span class="font-medium">Items:</span>
+										<span class="">3</span>
+									</div>
+									<div class="">
+										<span class="font-medium">Amount:</span>
+										<span class="">3000</span>
+									</div>
+									<div class="">
+										<span class="font-medium">Status:</span>
+										<span class="text-green-600">Received</span>
+									</div>
+								</div>
+								<div class="flex justify-end mt-1">
+									<button class="bg-indigo-500 px-3 py-0.5 rounded mt-2 text-white uppercase text-sm">
+										<a href="orderDetails.html">manage</a>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End list for small screen -->
 				</div>
 				<!-- end order list  -->
 			</div>
