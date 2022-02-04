@@ -50,6 +50,9 @@
   .cat-item:hover .sub-cat {
     display: block;
   }
+  .sub-cat-item:hover .sub-sub-cat {
+    display: block;
+  }
 
   /* end header  */
 
