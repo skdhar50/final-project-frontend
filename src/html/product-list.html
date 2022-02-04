@@ -3234,7 +3234,7 @@
           </button>
           <div
             id="filter"
-            class="w-0 xl:col-span-2 md:!w-full absolute mt-10 md:mt-0 md:relative transition-all duration-500 overflow-hidden"
+            class="w-0 xl:col-span-2 md:!w-full absolute mt-10 md:mt-0 md:relative transition-all duration-200 overflow-hidden"
           >
             <div class="rounded-lg border shadow overflow-hidden">
               <div class="flex justify-around items-center bg-gray-900">
@@ -3253,7 +3253,7 @@
               <form action="#" class="text-gray-900 text-sm">
                 <div class="py-2 bg-gray-200 border-b border-gray-300">
                   <button
-                    onclick="openFilterOption('catOptions')"
+                    onClick="openFilterOption('catOptions')"
                     class="w-full flex justify-between items-center px-2"
                   >
                     <p>Category</p>
@@ -3340,7 +3340,7 @@
                 </div>
                 <div class="py-2 bg-gray-200 border-b border-gray-300">
                   <button
-                    onclick="openFilterOption('brandOptions')"
+                    onClick="openFilterOption('brandOptions')"
                     class="w-full flex justify-between items-center px-2"
                   >
                     <p>Brand</p>
@@ -3430,7 +3430,7 @@
                 </div>
                 <div class="py-2 bg-gray-200 border-b border-gray-300">
                   <button
-                    onclick="openFilterOption('typeOptions')"
+                    onClick="openFilterOption('typeOptions')"
                     class="w-full flex justify-between items-center px-2"
                   >
                     <p>Product Type</p>
@@ -3520,7 +3520,7 @@
                 </div>
                 <div class="py-2 bg-gray-200 border-b border-gray-300">
                   <button
-                    onclick="openFilterOption('colorOptions')"
+                    onClick="openFilterOption('colorOptions')"
                     class="w-full flex justify-between items-center px-2"
                   >
                     <p>Color Family</p>
@@ -3610,7 +3610,7 @@
                 </div>
                 <div class="py-2 bg-gray-200 border-b border-gray-300">
                   <button
-                    onclick="openFilterOption('warrantyOptions')"
+                    onClick="openFilterOption('warrantyOptions')"
                     class="w-full flex justify-between items-center px-2"
                   >
                     <p>Warranty Type</p>
@@ -3700,7 +3700,7 @@
                 </div>
                 <div class="py-2 bg-gray-200 border-b border-gray-300">
                   <button
-                    onclick="openFilterOption('priceOptions')"
+                    onClick="openFilterOption('priceOptions')"
                     class="w-full flex justify-between items-center px-2"
                   >
                     <p>Price</p>
@@ -3745,7 +3745,7 @@
                 </div>
                 <div class="py-2 bg-gray-200 border-b border-gray-300">
                   <button
-                    onclick="openFilterOption('displayOptions')"
+                    onClick="openFilterOption('displayOptions')"
                     class="w-full flex justify-between items-center px-2"
                   >
                     <p>Display Size</p>
@@ -3790,7 +3790,7 @@
                 </div>
                 <div class="py-2 bg-gray-200 border-b border-gray-300">
                   <button
-                    onclick="openFilterOption('ramOptions')"
+                    onClick="openFilterOption('ramOptions')"
                     class="w-full flex justify-between items-center px-2"
                   >
                     <p>RAM</p>
@@ -3835,7 +3835,7 @@
                 </div>
                 <div class="py-2 bg-gray-200 border-b border-gray-300">
                   <button
-                    onclick="openFilterOption('processorOptions')"
+                    onClick="openFilterOption('processorOptions')"
                     class="w-full flex justify-between items-center px-2"
                   >
                     <p>Processor Series</p>
@@ -3880,7 +3880,7 @@
                 </div>
                 <div class="py-2 bg-gray-200 border-b border-gray-300">
                   <button
-                    onclick="openFilterOption('graphicsOptions')"
+                    onClick="openFilterOption('graphicsOptions')"
                     class="w-full flex justify-between items-center px-2"
                   >
                     <p>Graphics Card Series</p>
@@ -3925,7 +3925,7 @@
                 </div>
                 <div class="py-2 bg-gray-200 border-b border-gray-300">
                   <button
-                    onclick="openFilterOption('sizeOptions')"
+                    onClick="openFilterOption('sizeOptions')"
                     class="w-full flex justify-between items-center px-2"
                   >
                     <p>Size</p>
@@ -4850,6 +4850,20 @@
           document.getElementById(divId).style.width === "300px"
             ? "0px"
             : "300px";
+      };
+
+      const openFilter = (divId) => {
+        document.getElementById(divId).style.width =
+          document.getElementById(divId).style.width === "20rem"
+            ? "0px"
+            : "20rem";
+      };
+      const openFilterOption = (divId) => {
+        console.log(document.getElementById(divId).style.display);
+        document.getElementById(divId).style.display =
+          document.getElementById(divId).style.display === "block"
+            ? "none"
+            : "block";
       };
 
       const openSearchBox = (divId) => {

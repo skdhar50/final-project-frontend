@@ -801,6 +801,10 @@ select {
   bottom: 0.25rem;
 }
 
+.top-5 {
+  top: 1.25rem;
+}
+
 .z-30 {
   z-index: 30;
 }
@@ -2939,6 +2943,10 @@ select {
 
   .md\:w-36 {
     width: 9rem;
+  }
+
+  .md\:w-64 {
+    width: 16rem;
   }
 
   .md\:scale-100 {
